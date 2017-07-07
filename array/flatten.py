@@ -1,4 +1,6 @@
+# -*- coding: utf-8 -*-
 """
+模拟实现python数组操作 flatten
 Implement Flatten Arrays.
 Given an array that may contain nested arrays,
 give a single resultant array.

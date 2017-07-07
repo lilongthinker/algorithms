@@ -22,6 +22,7 @@ def longest_non_repeat(s):
         used_char[char] = i
     return maxlen
 
-a = "abcabcdefbb"
+a = "abcabcbb"
+# a = "abcabcdefbb"
 print(a)
 print(longest_non_repeat(a))

@@ -1,3 +1,4 @@
+# -*- coding: utf-8 -*-
 """
 Given a collection of intervals, merge all overlapping intervals.
 
@@ -19,9 +20,11 @@ def merge(intervals):
     """
     out = []
     for i in sorted(intervals, key=lambda i: i.start):
+        # 列表最后一个 下标为 -1
         if out and i.start <= out[-1].end:
             out[-1].end = max(out[-1].end, i.end)
         else:
+            # 列表的 += 等于 append ??
             out += i,
     return out
 
@@ -32,9 +35,11 @@ def print_intervals(intervals):
     print("".join(res))
 
 if __name__ == "__main__":
-    given = [[1,3],[2,6],[8,10],[15,18]]
+    given = [[1,3],[8,10],[2,6],[15,18]]
     intervals = []
+    # 自动解包
     for l, r in given:
-        intervals.append(Interval(l,r))
+        # intervals.append(Interval(l,r))
+        intervals += (Interval(l,r)),
     print_intervals(intervals)
     print_intervals(merge(intervals))

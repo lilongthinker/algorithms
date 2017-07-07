@@ -1,4 +1,6 @@
+# -*- coding: utf-8 -*-
 """
+约瑟夫问题
 There are people sitting in a circular fashion,
 print every third member while removing them,
 the next counter starts immediately after the member is removed.

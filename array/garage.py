@@ -1,3 +1,5 @@
+# -*- coding: utf-8 -*-
+# 停车场只有一个空位，按照开始的状态移动到最终的状态需要几步
 # There is a parking lot with only one empty spot. Given the initial state
 # of the parking lot and the final state. Each step we are only allowed to
 # move a car
@@ -21,6 +23,7 @@
 def garage(initial, final):
     steps = 0
     while initial != final:
+        # 查找元素0所在的下标
         zero = initial.index(0)
         if zero != final.index(0):
             car_to_move = final[zero]
@@ -32,6 +35,8 @@ def garage(initial, final):
                     initial[zero], initial[i] = initial[i], initial[zero]
                     break
         steps += 1
+        # print the middle status
+        print "middle:",initial
     return steps
 
 if __name__ == "__main__":
